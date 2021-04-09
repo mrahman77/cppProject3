@@ -1,0 +1,357 @@
+CODE:
+
+html-
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="style.css" rel="StyleSheet" type="text/css" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Sample</title>
+
+  </head>
+
+  <body>
+
+    <ul>
+
+      <li><a class="active" href="#home">Home</a></li>
+
+      <li><a href="#animal">Animal</a></li>
+
+      <li><a href="#birds">Birds</a></li>
+
+      <li><a href="#amphibian">Amphibians</a></li>
+
+    </ul>
+
+    <!--Demonstrate the image as link-->
+
+    <p>
+
+      Image as Link:
+
+      <a href="#">
+
+        <img alt="W3Schools" src="sample_img.jpg" width="100" height="100" />
+
+      </a>
+
+    </p>
+
+    <!--Demonstrate the link opening mail application-->
+
+    <p>
+
+      Email link:
+
+      <a href="mailto:someone@example.com" target="_top">Send E-Mail</a>
+
+    </p>
+
+    <!--Demonstrate the setting of min and max height/width of div section-->
+
+    <p>Example of max width</p>
+
+    <div id="set_max_width"></div>
+
+    <!--Demonstrate the setting of min and max height/width of div section-->
+
+    <p>Example of max height</p>
+
+    <div id="set_max_height"></div>
+
+    <br />
+
+    <br />
+
+    <!--Demonstrate the setting of color and bacground color of text-->
+
+    <div id="set_color">
+
+      some random texts to demonstrate the setting of colors of the textual
+
+      section
+
+    </div>
+
+    <!--Demonstrate the dropping of caps -->
+
+    <p>
+
+      All small case for the text -
+
+      <span>Actual Text : </span>
+
+      <span id="tolower">Actual Text</span>
+
+    </p>
+
+    <!--Demonstrate the grid system in html-->
+
+    <div class="grid-container">
+
+      <div class="item_1">Header</div>
+
+      <div class="item_2">Side</div>
+
+      <div class="item_3">Main</div>
+
+      <div class="item_4">Right</div>
+
+      <div class="item_5">Footer</div>
+
+    </div>
+
+    <!--Demonstrate the relative and absolute position-->
+
+    <p>A relative and absolute positioning demonstration</p>
+
+    <div class="relative">
+
+      This division element has relative positioning
+
+      <div class="absolute">This division element has absolute positioning</div>
+
+    </div>
+
+    <!--Demonstrate the block quote-->
+
+    <p>Example of blockquote</p>
+
+    <blockquote cite="#">
+
+      some random texts to demonstrate the blockquote section of the html and
+
+      css
+
+    </blockquote>
+
+    <!--Demonstrate the block quote with quotes-->
+
+    <p>Example of blockquote with quotes</p>
+
+    <blockquote cite="#">
+
+      &lsquo;some random texts to demonstrate the blockquote section of the html
+
+      and css&rsquo;
+
+    </blockquote>
+
+  </body>
+
+</html>
+
+css(style.css):
+
+/* css to demonstrate the navigation bar with hover and visited behaviour */
+
+ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background-color: #333;
+
+}
+
+li {
+
+  float: left;
+
+}
+
+li a {
+
+  display: block;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+li a:hover {
+
+  color: red;
+
+  font-size: 2em;
+
+}
+
+li a:visited {
+
+  color: #333;
+
+}
+
+#set_max_width {
+
+  max-width: 600px;
+
+  height: 300px;
+
+  background-color: green;
+
+}
+
+/* css to demonstrate setting of max-min height */
+
+#set_max_height {
+
+  min-height: 400px; /* overrides height and max-height */
+
+  height: 200px;
+
+  max-height: 300px;
+
+  background-color: blue;
+
+}
+
+/* css to demonstrate the setting color and background color of the text */
+
+#set_color {
+
+  color: rgb(34, 123, 200);
+
+  background-color: rgb(123, 38, 120);
+
+  padding: 10px;
+
+}
+
+/* css to demonstrate the lower case of the text */
+
+#tolower {
+
+  text-transform: lowercase;
+
+}
+
+/* css to demonstrate the grid-layout in css */
+
+.item_1 {
+
+  grid-area: header;
+
+}
+
+.item_2 {
+
+  grid-area: menu;
+
+}
+
+.item_3 {
+
+  grid-area: main;
+
+}
+
+.item_4 {
+
+  grid-area: right;
+
+}
+
+.item_5 {
+
+  grid-area: footer;
+
+}
+
+/* container class */
+
+.grid-container {
+
+  display: grid;
+
+  grid-template-areas:
+
+    "header header header header header header"
+
+    "menu main main main right right"
+
+    "menu footer footer footer footer footer";
+
+  grid-gap: 10px;
+
+  background-color: grey;
+
+  padding: 5px;
+
+}
+
+.grid-container > div {
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  text-align: center;
+
+  padding: 10px 0;
+
+  font-size: 2em;
+
+}
+
+/*Demonstrate the seeting of margin and padding of blockquote*/
+
+.blockquote{
+
+padding:10px;
+
+margin:5px
+
+}
+
+/* css to demonstrate the relative and absolute positioning of the div */
+
+div.relative {
+
+  position: relative;
+
+  width: 350px;
+
+  height: 150px;
+
+  border: 5px solid cyan;
+
+}
+
+div.absolute {
+
+  position: absolute;
+
+  top: 60px;
+
+  right: 0;
+
+  width: 150px;
+
+  height: 80px;
+
+  border: 5px solid cyan;
+
+}
+
+RESULT:
